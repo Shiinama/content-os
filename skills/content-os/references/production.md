@@ -45,7 +45,7 @@ If voice.md does not exist, bootstrap from [../assets/voice-template.md](../asse
 Per-platform knowledge, loaded only for the platforms being targeted:
 
 1. First check `$DATA/content/platforms/<name>.md` (user overrides and custom platforms).
-2. Fall back to [platforms/](platforms/) here: `wechat`, `linkedin`, `x`, `jike`, `xiaohongshu`, `zhihu`, `douyin` (the last two are carousel platforms).
+2. Fall back to [platforms/](platforms/) here: `blog`, `wechat`, `linkedin`, `x`, `jike`, `xiaohongshu`, `zhihu`, `douyin` (the last two are carousel platforms; `blog` also defines the publish/data-source contracts a scriptable self-hosted blog can fill in via its override file).
 
 Each profile defines audience, format and length, a Visuals contract, structure norms, tone, hooks and titles, CTA norms, taboos, and a pre-publish checklist. Obey the checklist before delivering a variant — but voice.md overrides a profile's generic title/hook advice where they conflict. If a target platform has no profile, say so and draft from the closest one, naming the substitution.
 
@@ -55,10 +55,11 @@ Each profile defines audience, format and length, a Visuals contract, structure 
 2. Check the source against the persona rule above: does the card carry the user's own scene and stakes? If not, propose the honest angle (build-log, or wait) before writing a word.
 3. Pick structures from `$DATA/templates/INDEX.md`: a textual template for the writing and, when a target platform's Visuals contract calls for images, an `image-prompt` card. Recommend the single best match of each with a one-line reason and its When Not to Use. If nothing fits, write bare and mention a template can be extracted afterwards if the result works.
 4. Read profile.md, voice.md, and the target platform profiles.
-5. One target platform: draft the variant directly. Multiple targets: write master.md first, then adapt.
-6. Create the piece directory with a short slug, write piece.md with full provenance, status `drafting`.
-7. Run the Visual production flow for every platform whose profile requires images. On carousel platforms this is the main act: the variant is not deliverable without it.
-8. Deliver the draft in conversation, then confirm lightly: piece id, the angle chosen, and the one or two spots most worth the user's editing attention.
+5. Title the piece with the four-step method in [title-patterns.md](title-patterns.md) — premise sentence, form, swap test, voice calibration — offering 2–3 candidates. voice.md and platform profiles override it where they conflict.
+6. One target platform: draft the variant directly. Multiple targets: write master.md first, then adapt.
+7. Create the piece directory with a short slug, write piece.md with full provenance, status `drafting`.
+8. Run the Visual production flow for every platform whose profile requires images. On carousel platforms this is the main act: the variant is not deliverable without it.
+9. Deliver the draft in conversation, then confirm lightly: piece id, the angle chosen, and the one or two spots most worth the user's editing attention.
 
 ## Adapt flow
 
@@ -80,6 +81,7 @@ Each profile defines audience, format and length, a Visuals contract, structure 
 
 ## Publish flow
 
+0. If the target platform's profile defines a Publish contract (a scriptable blog), offer to push the variant via that contract — only on the user's explicit go-ahead, like the Spend Gate. Use the returned URL for the steps below; on any failure, fall back to delivering the text.
 1. Check `visuals:` first: a carousel platform still at `pending` gets one line ("发布的是没生成图的版本？") before recording.
 2. Update piece.md: variant → `published <url>`; piece → `published` once any variant is live.
 3. Append to `$DATA/content/PUBLISHED.md`: `date | piece | platform | url | metrics pending`.

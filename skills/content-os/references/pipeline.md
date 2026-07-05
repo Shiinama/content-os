@@ -76,6 +76,7 @@ Pause for a light confirmation at exactly three gates: after choosing angle and 
 - Broken provenance: pieces whose `ideas:`, `template:`, or `visual_template:` reference cards that no longer exist.
 - Visuals: published pieces on image-mandatory platforms with `visuals` still `pending`; orphaned files under `assets/` no variant references.
 - spira CLI: `spira auth whoami` failing, or low `spira credits balance`. Report only — never spend credits in a health check.
+- Scriptable blog (a platform override defining a Data-source contract): offer reconciliation — PUBLISHED.md vs the blog's published list, fragment-style posts not yet in the idea pool, recent self-written posts not yet in voice.md samples. Read-only; import or update only when the user says so.
 - Report findings as a short list with one-line fixes; apply only when the user says so.
 
 ## Principles specific to pipeline
