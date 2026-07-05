@@ -1,0 +1,14 @@
+{
+  "name": "content-os",
+  "displayName": "Content OS",
+  "version": "3.0.0",
+  "description": "A personal content system for Claude Code: capture ideas with their mental context, keep proven content structures as reusable templates, and turn both into platform-native posts (WeChat, X, LinkedIn, xiaohongshu, ...) written from your own persona and voice.",
+  "author": {
+    "name": "Shiinama",
+    "url": "https://github.com/Shiinama"
+  },
+  "homepage": "https://github.com/Shiinama/content-os",
+  "repository": "https://github.com/Shiinama/content-os",
+  "license": "MIT",
+  "keywords": ["content", "writing", "idea-capture", "templates", "persona", "xiaohongshu", "wechat"]
+}

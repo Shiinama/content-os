@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "content-os",
+  "owner": {
+    "name": "Shiinama",
+    "url": "https://github.com/Shiinama"
+  },
+  "metadata": {
+    "description": "Content OS — a personal content system for Claude Code",
+    "version": "3.0.0"
+  },
+  "plugins": [
+    {
+      "name": "content-os",
+      "source": "./",
+      "description": "Capture ideas with context, keep proven structures as templates, and produce platform-native content from your own persona and voice. Ships two skills: content-os (capture / templates / production / pipeline) and profile (persona onboarding).",
+      "version": "3.0.0",
+      "author": { "name": "Shiinama" },
+      "license": "MIT",
+      "keywords": ["content", "writing", "idea-capture", "templates", "persona"]
+    }
+  ]
+}
